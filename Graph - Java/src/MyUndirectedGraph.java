@@ -1,4 +1,4 @@
-//public Mail beatriceWittgren{return bewi7426@student.su.se;}
+
 import java.util.*;
 
 public class MyUndirectedGraph<T> implements UndirectedGraph<T> 

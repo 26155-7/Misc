@@ -1,4 +1,4 @@
-//package prop.assignment0;
+
 
 public class TermNode implements INode{
 	public INode leftChild = null;

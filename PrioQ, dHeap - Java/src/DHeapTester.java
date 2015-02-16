@@ -12,10 +12,6 @@ public class DHeapTester {
 
 	private DHeap<Integer> heap = new DHeap<Integer>(4);
 
-	/**
-	 * Detta test kontrollerar att er kod implementerar en fungerande
-	 * prioritetsk�. Detta test ska naturligtvis fungera.
-	 */
 	@Test
 	public void testFunctionality() {
 		Random rnd = new Random();
@@ -36,17 +32,6 @@ public class DHeapTester {
 		}
 	}
 
-	/**
-	 * Er heap ska ha tv� konstruktorer: en som inte tar n�gra parametrar och
-	 * som skapar en vanlig bin�r heap, och en som tar ett argument: d.
-	 * Observera att detta betyder att ni m�ste f�r�ndra de konstruktorer som
-	 * finns i ursprungskoden eftersom det redan finns en konstruktor som tar
-	 * ett heltalsargument.
-	 * 
-	 * Den tredje konstruktorn i orginalversionen f�r ni g�ra som ni vill med,
-	 * den �r inte viktig f�r uppgiften, s� plocka bort den om ni inte absolut
-	 * vill fixa den ocks�.
-	 */
 	@Test
 	public void testConstructors() {
 		heap = new DHeap<Integer>(); // Skapar en bin�rheap
@@ -60,12 +45,6 @@ public class DHeapTester {
 		new DHeap<Integer>(1);
 	}
 
-	/**
-	 * Detta test f�ruts�tter att ni l�gger till en metod i heapen f�r att r�kna
-	 * ut index f�r en nods f�r�lder. Detta �r inte n�dv�ndigt f�r att l�sa
-	 * uppgiften, s� om ni vill kan ni strunta i testet. Det �r dock inget vi
-	 * rekommenderar eftersom metoden g�r problemet l�ttare att l�sa.
-	 */
 	@Test
 	public void testParentIndex() {
 		assertEquals(5, heap.parentIndex(18));
@@ -87,21 +66,12 @@ public class DHeapTester {
 		assertEquals(1, heap.parentIndex(3));
 	}
 
-	/**
-	 * �ven detta test f�ruts�tter att ni g�r en metod f�r att r�kna ut
-	 * f�r�lderns index och kan ignorerars om ni inte g�r det.
-	 */
+
 	@Test(expected = IllegalArgumentException.class)
 	public void testTooLowParentIndex() {
 		heap.parentIndex(1);
 	}
 
-	/**
-	 * Detta test f�ruts�tter att ni l�gger till en metod i heapen f�r att r�kna
-	 * ut index f�r en nods f�rsta barn. Detta �r inte n�dv�ndigt f�r att l�sa
-	 * uppgiften, s� om ni vill kan ni strunta i testet. Det �r dock inget vi
-	 * rekommenderar eftersom metoden g�r problemet l�ttare att l�sa.
-	 */
 	@Test
 	public void testFirstChildIndex() {
 		assertEquals(2, heap.firstChildIndex(1));
@@ -122,10 +92,6 @@ public class DHeapTester {
 
 	}
 
-	/**
-	 * �ven detta test f�ruts�tter att ni g�r en metod f�r att r�kna ut det
-	 * f�rsta barnets index och kan ignorerars om ni inte g�r det.
-	 */
 	@Test(expected = IllegalArgumentException.class)
 	public void testTooLowChildIndex() {
 		heap.firstChildIndex(0);
@@ -137,19 +103,6 @@ public class DHeapTester {
 			assertEquals(expected[n], heap.get(n + 1));
 	}
 
-	/**
-	 * Detta test kr�ver att arrayen i heapen g�rs tillg�nglig via ett par
-	 * metoder. Metoden size �r inte mycket att s�ga om, den borde antagligen
-	 * funnits i orginalet. get d�remot bryter inkapslingen ganska rej�lt och �r
-	 * bara till f�r att vi ska kunna testa. Det �r naturligtvis f�rkastligt,
-	 * men ibland n�dv�ndigt. Den h�gsta skyddsniv�n (=b�sta) get kan ha �r
-	 * deafult-niv�n. Detta test m�ste fungera, s� ni m�ste l�gga till
-	 * metoderna:
-	 * 
-	 * public int size(){ return currentSize; }
-	 * 
-	 * AnyType get(int index){ return array[index]; }
-	 */
 	@Test
 	public void testContent() {
 		testValues();

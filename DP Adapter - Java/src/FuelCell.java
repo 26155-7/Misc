@@ -31,15 +31,4 @@ class FuelCell {
   private boolean active;
   private PowerRegulator regulator;
 
-   /* För att starta en FuelCell
-    	fuelOn()
-
-     För att stanna en FuelCell
-       	regulator.setElectricPower(0);
-  	    fuelOff();
-
-     Ändring av effekt görs med
-     	regulator.setElectricPower(int)
-  */
-
 }

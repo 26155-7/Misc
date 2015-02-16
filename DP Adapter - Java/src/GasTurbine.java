@@ -69,19 +69,4 @@ class GasTurbine {
   private int pressure; // 0 .. 100 units
   private boolean isRunning, compressors, burner;
 
-
-  /*
-    För att starta en GasTurbine
-  	startCompressors()
-	setCompressorPressure(20)
-        burnerOn()
-
-     För att stanna en GasTurbine
-     	setCompressorPressure(0);
-	stopCompressors();
-  	burnerOff();
-
-    Ändring av pressure ger ändring av effekt
-  */
-
 }

@@ -19,12 +19,12 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 	 */
 	public DHeap( )
 	{
-//ny kons
+
 		this(2, DEFAULT_CAPACITY );
 	}
 
 	public DHeap(int d){
-//ny kons
+
 		this(d, DEFAULT_CAPACITY);
 		if(d < 2){
 			throw new IllegalArgumentException();
@@ -37,14 +37,14 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 	 */
 	public DHeap(int d, int capacity )
 	{
-//ny kons
+
 		this.d = d;
 		currentSize = 0;
 		
 		array = (AnyType[]) new Comparable[ capacity + 1 ];
 	}
 
-//Min parent
+
 	public int parentIndex(int child){
 		if(child < 2){
 			throw new IllegalArgumentException();
@@ -52,7 +52,7 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 		return (child - 2) / d + 1;
 	}
 
-//Min child  
+
 	public int firstChildIndex(int parent){
 		if(parent < 1){
 			throw new IllegalArgumentException();
@@ -60,12 +60,12 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 		return (parent - 1) * d + 2;
 	}
 	
-//Min size
+
 	public int size(){
 		return currentSize;
 	}
 
-//Min get
+
 	public AnyType get(int i){
 		return array[i];
 	}
@@ -80,7 +80,6 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 		if( currentSize == array.length - 1 )
 			enlargeArray( array.length * 2 + 1 );
 
-// Percolate up
 		int hole = ++currentSize;
 		for(array[0] = x ;hole > 1 &&  x.compareTo( array[parentIndex(hole)] ) < 0; hole = parentIndex(hole) )
 			array[ hole ] = array[parentIndex(hole)];
@@ -123,11 +122,6 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 		return minItem;
 	}
 
-	/**
-	 * Establish heap order property from an arbitrary
-	 * arrangement of items. Runs in linear time.
-	 */
-
 
 	/**
 	 * Test if the priority queue is logically empty.
@@ -150,8 +144,6 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 
 	private int currentSize;      // Number of elements in heap
 	private AnyType [ ] array; // The heap array
-
-//ny vari
 	private int d;
 
 	/**
@@ -160,7 +152,6 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 	 */
 	private void percolateDown( int hole )
 	{
-//down
 		int child;
 		AnyType tmp = array[ hole ];
 
@@ -183,7 +174,6 @@ public class DHeap<AnyType extends Comparable<? super AnyType>>
 		array[ hole ] = tmp;
 	}
 
-	// Test program
 	public static void main( String [ ] args )
 	{
 		int numItems = 10000;

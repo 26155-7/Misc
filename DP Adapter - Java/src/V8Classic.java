@@ -61,18 +61,4 @@ class V8Classic  {
 
    private boolean running, ignition, choke;
    private int throttle; //throttle vent 0 .. 100 units
-
-  /*  För att starta en V8:a
-     	ignitionOn();
-     	chokeOn();
-     	setThrottle(30);
-     	runStarter();
-     	chokeOff();
-
-     För att stanna en V8:a
-      	setThrottle(0);
-     	ignitionOff()
-
-     Ändring av throttle ger ändring av effekt
-  */
 }

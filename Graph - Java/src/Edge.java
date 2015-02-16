@@ -1,4 +1,4 @@
-//public Mail beatriceWittgren{return bewi7426@student.su.se;}
+
 public class Edge<T> implements Comparable<Edge<T>>
 	{
 		private T node1;

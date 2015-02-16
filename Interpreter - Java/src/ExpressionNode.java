@@ -1,4 +1,3 @@
-//package prop.assignment0;
 
 public class ExpressionNode implements INode{
 	public INode leftChild = null;

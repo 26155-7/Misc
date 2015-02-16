@@ -1,4 +1,3 @@
-//package alda.linear;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -13,7 +12,7 @@ public class ALDAListTest {
 	ALDAList<String> list = new MyALDAList<String>();
 
 	private void testField(java.lang.reflect.Field f) {
-		assertTrue("Alla attribut bår vara privata",
+		assertTrue("Alla attribut bör vara privata",
 				java.lang.reflect.Modifier.isPrivate(f.getModifiers()));
 		assertFalse("Finns ingen anledning att använda några arrayer", f
 				.getType().isArray());
@@ -22,7 +21,6 @@ public class ALDAListTest {
 				java.lang.reflect.Modifier.isStatic(f.getModifiers()));
 		for (Class<?> i : f.getType().getInterfaces()) {
 			assertFalse(
-					"Du ska inte använda någon funktionalitet ur java.util utan skriva all kod själv",
 					i.getName().startsWith("java.util"));
 		}
 	}

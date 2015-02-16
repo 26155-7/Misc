@@ -1,20 +1,12 @@
 public class PowerSourceTest{
 
 	public PowerSourceTest() {
-		/*	Instansiera de tre adapterade klasserna och placera dem i vectorn */
 		vector[0] = new XV8Classic();
 		vector[1] = new XGasTurbine();
 		vector[2] = new XFuelCell();
 	}
 
 	public void run() {
-		/*	För vart och ett av objekten i vectorn ska följande scenario utföras:
-		  - toString
-		  - tryStart
-		  - incPower
-		  - decPower
-		  - stop
-		 */
 		for(PowerSource ps : vector){
 			System.out.println(ps.toString());
 			ps.tryStart();
@@ -25,7 +17,7 @@ public class PowerSourceTest{
 	}
 
 
-	private PowerSource[] vector = new PowerSource[3];   /* En vector för att lagra de tre instanserna */
+	private PowerSource[] vector = new PowerSource[3];   
 
 /*V8 CLASSIC*/
 	class XV8Classic implements PowerSource{
@@ -149,7 +141,6 @@ public class PowerSourceTest{
 	}
 	
 	public static void main(String args[]) {
-		/* Skapa en instans av PowerSourceTest och anropa run-metoden.*/
 		PowerSourceTest pst = new PowerSourceTest();
 		pst.run();
 	}

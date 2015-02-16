@@ -1,4 +1,3 @@
-//package prop.assignment0;
 
 public class AssignmentNode implements INode{
 	public Lexeme leftChild = null;

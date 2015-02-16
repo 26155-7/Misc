@@ -1,4 +1,3 @@
-//package prop.assignment0;
 
 public class FactorNode implements INode{
 	public Lexeme lexeme = null;

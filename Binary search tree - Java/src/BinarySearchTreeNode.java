@@ -1,4 +1,3 @@
-//Beatrice Wittgren [bewi7426@student.su.se]
 
 public class BinarySearchTreeNode<T extends Comparable<T>> {
 

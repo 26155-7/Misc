@@ -1,4 +1,4 @@
-//public mail Beatrice Wittgren(){return bewi7426@student.su.se;}
+
 import java.util.*;
 
 public class MyALDAList<E> implements ALDAList<E>{
