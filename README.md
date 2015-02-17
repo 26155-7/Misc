@@ -1,3 +1,3 @@
 # Misc
-@author Beatrice Wittgren
+@author Beatrice Wittgren.
 Some projects in Java, C++ and Prolog.
